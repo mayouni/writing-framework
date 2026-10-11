@@ -169,7 +169,7 @@ def main():
         CALQUES = {}
         INTENSIFIERS = r"\b(très|vraiment|tout simplement|simplement|évidemment|extrêmement|incroyablement|littéralement)\b"
         HEDGES = r"\b(en quelque sorte|plus ou moins|d'une certaine manière|un petit peu)\b"
-        SUPERLATIVES = r"\b(pour la première fois|sans précédent|révolutionnaire|l'un des plus|l'une des plus|de classe mondiale|jamais vu)\b"
+        SUPERLATIVES = r"\b(pour la (toute )?première fois (dans l'histoire|au monde)|sans précédent|révolutionnaire|l'un des plus|l'une des plus|de classe mondiale|jamais vu)\b"
         ABSOLUTES = r"\b(la cause de tous|tous les problèmes|aucun autre (langage|système|outil)|toujours|jamais|tout le monde|personne|impossible)\b"
         FORBIDDEN = {r"\bsubstrat\b": "substrat (jamais)", r"\bfabricants?\b|\bcréateurs?\b": "fabricant → artisan du logiciel",
                      r"\bdéveloppeurs?\b": "développeur → programmeur", r"\bmeilleures? pratiques?\b": "meilleure pratique → ce qui a marché"}
