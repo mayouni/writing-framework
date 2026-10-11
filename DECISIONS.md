@@ -1,0 +1,11 @@
+# Decisions of the writing framework
+
+| Id | Date | Decision | Reason | Open |
+|---|---|---|---|---|
+| AWF-01 | 2026-10-11 | The framework is built from the Ring book study, not from the two 2026 books' style guides | The Ring book is the only book the author wrote alone; the 2026 guides describe agents' choices (Refine's em dash, the "documentary" register) as if they were his | The author confirms which Refine/Softanza choices he owns |
+| AWF-02 | 2026-10-11 | Twelve commitments, named after the twelve habits of the study (H1–H12), each with the agents' part, the author's part and a check | A rule without a check is a wish; a check without the author's part would let agents write the whole book | — |
+| AWF-03 | 2026-10-11 | Exclamations are not rationed per chapter (Softanza's "one per chapter at most") but placed: only after a run or a reveal, about two per thousand words | The copyedit kept and even added them where they followed a run; the study found none of his on an abstract sentence | The Softanza brief's rule to be amended by the author |
+| AWF-04 | 2026-10-11 | The colon is the book's mark; the em dash is rare | 15 colons against 0.5 dashes per 1,000 words in the Ring book; the dash was the Refine agent's habit | — |
+| AWF-05 | 2026-10-11 | The noise list is enforced by a tool (`tools/style_lint.py`), the author's calls are never decided by a tool or an agent | The editor's cuts split cleanly into noise and voice; the voice items are his to rule | The author rules on the calls list (FRAMEWORK §4) |
+| AWF-06 | 2026-10-11 | A hole where a particular belongs is an `[AUTHOR: …]` marker, filled by the author or, on his word, by the answer policy that invents nothing | Softanza phase 9 showed the policy works at scale (77 answers, none invented) and leaves the warmth missing, which is the honest state | — |
+| AWF-07 | 2026-10-11 | Fresh-reader verification is a standing gate, not a one-time phase | Softanza phases 10–11 found 624 statements to narrow in 41 drafted pages; the overclaim is the author's reach without his concession, and agents inherit the reach | — |
