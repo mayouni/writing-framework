@@ -91,14 +91,15 @@ def lint_text(text):
     prose = [b[1] for b in blocks if b[0] == "prose"]
     joined = "\n\n".join(prose)
     nocode = re.sub(r"`[^`\n]*`", " CODE ", joined)                                   # inline code is names, not prose
-    unquoted = re.sub(r"[\"“][^\"”\n]{1,60}[\"”]", " QUOTED ", nocode)   # a quoted word is mentioned, not used
+    unquoted = re.sub(r"[\"“«][^\"”»\n]{1,120}[\"”»]", " QUOTED ", nocode)   # a quoted word is mentioned, not used
     low = joined.lower()
     sents = [s for p in prose for s in sentences(p)]
     words = re.findall(r"[A-Za-zÀ-ÿ'’]+", joined)
     N = max(1, len(words))
     k = 1000.0 / N
     lens = sorted(len(s.split()) for s in sents) or [0]
-    long_s = [s for s in sents if len(s.split()) > 40]
+    # a list item is an enumeration, not a sentence of prose: it does not count as a long sentence
+    long_s = [s for p in prose if not re.match(r"^\s*([-*•]|\d+[.)])\s", p) for s in sentences(p) if len(s.split()) > 40]
     # exclamations: after a run or not
     excl_total, excl_cold = 0, []
     for idx, (kind, p) in enumerate(blocks):
