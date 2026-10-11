@@ -20,6 +20,7 @@ The first application plan: `../books/softanza-book/sessions/2026-10-11-writing-
 ```bash
 python ../../writing-framework/tools/style_lint.py src/en            # the noise and the profile, per page
 python ../../writing-framework/tools/style_lint.py src/en --strict   # exit 1 over the thresholds
+python ../../writing-framework/tools/style_lint.py src/fr --lang fr  # a first French noise list; English is the full one
 ```
 
 A fresh-reader pass on a chapter: give an agent `briefs/voice-reader.md` (how it sounds) or `briefs/fresh-verifier.md` (whether it is true to the record), the chapter, and nothing else; then a second agent `briefs/fixer.md` with the report. The author's open questions are answered by him, or on his word by `briefs/answer-policy.md`.

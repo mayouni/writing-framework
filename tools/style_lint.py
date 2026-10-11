@@ -90,6 +90,8 @@ def lint_text(text):
     blocks = blocks_of(text)
     prose = [b[1] for b in blocks if b[0] == "prose"]
     joined = "\n\n".join(prose)
+    nocode = re.sub(r"`[^`\n]*`", " CODE ", joined)                                   # inline code is names, not prose
+    unquoted = re.sub(r"[\"“][^\"”\n]{1,60}[\"”]", " QUOTED ", nocode)   # a quoted word is mentioned, not used
     low = joined.lower()
     sents = [s for p in prose for s in sentences(p)]
     words = re.findall(r"[A-Za-zÀ-ÿ'’]+", joined)
@@ -111,8 +113,8 @@ def lint_text(text):
         if not after_run:
             excl_cold.append(p[:90])
     findings = {}
-    def grab(pattern, label, flags=re.I):
-        hits = [m.group(0) for m in re.finditer(pattern, joined, flags)]
+    def grab(pattern, label, flags=re.I, source=None):
+        hits = [m.group(0) for m in re.finditer(pattern, source if source is not None else nocode, flags)]
         if hits:
             findings[label] = hits
         return len(hits)
@@ -121,8 +123,8 @@ def lint_text(text):
     hedges = grab(HEDGES, "hedge stacks")
     superl = grab(SUPERLATIVES, "superlatives")
     absol = grab(ABSOLUTES, "absolutes (to judge)")
-    forb = sum(grab(pat, "forbidden: " + why) for pat, why in FORBIDDEN.items())
-    emoji = len(EMOJI.findall(joined))
+    forb = sum(grab(pat, "forbidden: " + why, source=unquoted) for pat, why in FORBIDDEN.items())
+    emoji = len(EMOJI.findall(nocode))
     ell = sum(1 for p in prose if re.search(r"(\.\.\.|…)\s*$", p))
     colon_lead = 0
     for idx, (kind, p) in enumerate(blocks):
@@ -157,7 +159,21 @@ def over(r):
 
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+    global CALQUES, INTENSIFIERS, HEDGES, SUPERLATIVES, ABSOLUTES, FORBIDDEN
+    lang = sys.argv[sys.argv.index("--lang") + 1] if "--lang" in sys.argv else "en"
+    if lang == "fr":   # the English noise lists do not apply; a first French list, to grow with the books
+        CALQUES = {}
+        INTENSIFIERS = r"\b(très|vraiment|tout simplement|simplement|évidemment|extrêmement|incroyablement|littéralement)\b"
+        HEDGES = r"\b(en quelque sorte|plus ou moins|d'une certaine manière|un petit peu)\b"
+        SUPERLATIVES = r"\b(pour la première fois|sans précédent|révolutionnaire|l'un des plus|l'une des plus|de classe mondiale|jamais vu)\b"
+        ABSOLUTES = r"\b(la cause de tous|tous les problèmes|aucun autre (langage|système|outil)|toujours|jamais|tout le monde|personne|impossible)\b"
+        FORBIDDEN = {r"\bsubstrat\b": "substrat (jamais)", r"\bfabricants?\b|\bcréateurs?\b": "fabricant → artisan du logiciel",
+                     r"\bdéveloppeurs?\b": "développeur → programmeur", r"\bmeilleures? pratiques?\b": "meilleure pratique → ce qui a marché"}
+    args = [a for a in sys.argv[1:] if not a.startswith("--") and a != "-v" and a != lang]
     strict = "--strict" in sys.argv
     verbose = "--verbose" in sys.argv or "-v" in sys.argv
     jpath = sys.argv[sys.argv.index("--json") + 1] if "--json" in sys.argv else None
