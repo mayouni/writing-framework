@@ -11,6 +11,7 @@ A fresh reader checked one chapter (for its facts with `fresh-verifier.md`, or f
 
 ## Rules (they bind you)
 - The answer policy's first rules hold: invent nothing; attribute a sentence to its source; stage words are the book's; no person named; no other repository's product named; the forbidden words stay out.
+- **Never undersell the work** (AWF-08): a fix narrows a claim to what the evidence holds, and tells the limit as stage and direction ("in development", "to come"), never as weakness or apology; never write that nothing is in production unless the record says it.
 - **Do not edit any code fence**, and do not edit a chapter the author wrote himself (report instead). Front matter: change the text of stage values and the names in evidence lists only when an item requires it and the named thing exists; change no other key.
 - A number printed in prose beside a guard must equal the guard data; if you add one, read it there.
 - Where the report shows the record has changed since the chapter was drafted (a site that now says otherwise), state the present reading with its date, or state what the source said when the chapter was drafted, with its date. Prefer the present reading.
