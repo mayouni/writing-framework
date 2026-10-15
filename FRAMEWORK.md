@@ -1,6 +1,6 @@
 # The AYOUNI Writing Framework
 
-Version 0.2 · 2026-10-15 · Mansour Ayouni, with the sessions that wrote the Softanza book.
+Version 0.3 · 2026-10-15 · Mansour Ayouni, with the sessions that wrote the Softanza book.
 
 ## 0. What this is
 
@@ -90,6 +90,8 @@ An agent never sets `read`, never answers an `[AUTHOR]` marker except under the 
 **Paragraphs.** Short; one-sentence paragraphs for verdicts and hand-overs. A paragraph of abstract nouns with no run, figure or example within reach is rewritten or cut.
 
 **Figures.** A diagram of the logic before the code when the chapter teaches logic; a figure that carries an argument gets a caption that labels it, not one that instructs. Numbers in figures are read at build from the record and say where from.
+
+**Code.** One order of forms in every book on Haro (AWF-12): the declarative scene form with braces is the basis, and the one a reader meets first for three or more calls on one object; a chain is the better choice when one sentence says it, and the book uses both well; the classic form is shown, so a reader who knows it recognises the rest; the more natural form with `Naturally(...)` is shown where it runs. `@@()` stays until Haro prints the expressive form by default; from then on the expressive printout is the norm in the books, in the docs and in their sites.
 
 **Headings.** Sentence case; the book's fixed headings reused exactly in every chapter and in every language.
 

@@ -1,6 +1,6 @@
 # The AYOUNI Writing Framework
 
-How Mansour Ayouni's books are written with agents so that they read in one voice: his. Version 0.2, 2026-10-15.
+How Mansour Ayouni's books are written with agents so that they read in one voice: his. Version 0.3, 2026-10-15.
 
 | File | What it is |
 |---|---|
