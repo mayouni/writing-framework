@@ -1,6 +1,6 @@
 # The AYOUNI Writing Framework
 
-Version 0.1 · 2026-10-11 · Mansour Ayouni, with the sessions that wrote the Softanza book.
+Version 0.2 · 2026-10-15 · Mansour Ayouni, with the sessions that wrote the Softanza book.
 
 ## 0. What this is
 
@@ -67,7 +67,7 @@ What makes the two hands one voice is a small set of written things that pass be
 | The brief | the book's contract: structure, shape of a chapter, voice, rules that override everything | author | every session, first |
 | `[AUTHOR: …]` | a hole only the author can fill, in the page where it belongs | agent | author |
 | The decision log | every choice taken on the author's delegation, with the alternatives and the reason | agent | author, who overrules by editing |
-| The memo | one per phase, in the fixed form | agent | author |
+| The memo | one per phase, and every substantive report to the author, in the fixed form (AWF-11) | agent | author |
 | The verification report | a fresh reader's claim-by-claim verdict on a chapter | agent (one who did not write it) | a second agent, then the author |
 | The run and the court | the verdict under every block, read from data | the build | the reader |
 | The status page and manifest | what each chapter has of the four conditions; what a release contains | the build | everyone |
