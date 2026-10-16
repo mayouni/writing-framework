@@ -1,6 +1,6 @@
 # Brief: translate a page
 
-The translation is of the English page, page for page, in the same voice (first person, the author's) and with the same structure. It is bannered as a translation of a draft until the English page is marked `read` by the author; then it is re-read against the final English.
+The translation is of the English page, page for page, in the same voice (first person, the author's) and with the same structure. It is bannered as a translation of a draft until the English page is published by the author; then it is re-read against the final English.
 
 **Translated:** every sentence of prose; the title; the stage words' text; the headings (the book's fixed headings have one fixed translation each, in the book's style sheet); the cells of a table; the text of every `[AUTHOR: …]` marker; list items.
 

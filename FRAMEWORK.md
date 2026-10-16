@@ -1,6 +1,6 @@
 # The AYOUNI Writing Framework
 
-Version 0.3 · 2026-10-15 · Mansour Ayouni, with the sessions that wrote the Softanza book.
+Version 0.4 · 2026-10-16 · Mansour Ayouni, with the sessions that wrote the Softanza book.
 
 ## 0. What this is
 
@@ -71,9 +71,11 @@ What makes the two hands one voice is a small set of written things that pass be
 | The verification report | a fresh reader's claim-by-claim verdict on a chapter | agent (one who did not write it) | a second agent, then the author |
 | The run and the court | the verdict under every block, read from data | the build | the reader |
 | The status page and manifest | what each chapter has of the four conditions; what a release contains | the build | everyone |
-| `status: read` | the author's reading, set by him only | author | the build |
+| The page stage (`review`, `published`) | the author's reading and approval of a page, set by him only (AWF-13) | author | the build, the banner |
 
-An agent never sets `read`, never answers an `[AUTHOR]` marker except under the delegated policy, never edits the author's own text (a chapter he wrote is reported on, not edited), never names a person, never invents a particular.
+**Page stages (AWF-13).** Every page has one of three stages, and its banner says which in one word, with the meaning on hover: **Draft** (French Brouillon): written, its code run and judged, read by fresh readers, awaiting the author; **In review** (En relecture): the author is reviewing it and his remarks are being applied; **Published** (Publié): the author approved it, it is the book's text, and later changes are errata. The front matter holds `draft`, `review` or `published` (and `missing` for a planned page; the old `read` reads as `review`, `final` as `published`). The edition is derived: a proof copy until every page is published, and the colophon, the manifest and the map count the pages by stage. A French page is bannered as a translation of a draft until its English page is published.
+
+An agent never moves a page to `review` or `published`, never answers an `[AUTHOR]` marker except under the delegated policy, never edits the author's own text (a chapter he wrote is reported on, not edited), never names a person, never invents a particular.
 
 ## 4. The noise list (cut) and the author's calls (never decided by an agent)
 
@@ -95,7 +97,7 @@ An agent never sets `read`, never answers an `[AUTHOR]` marker except under the 
 
 **Headings.** Sentence case; the book's fixed headings reused exactly in every chapter and in every language.
 
-**Languages.** A translation is of the final English, page for page, same shape, same counts, code byte-identical; it is checked mechanically (`check_fr`-style) and bannered as a translation of a draft until the English is read. Vocabulary is the project's own glossary.
+**Languages.** A translation is of the final English, page for page, same shape, same counts, code byte-identical; it is checked mechanically (`check_fr`-style) and bannered as a translation of a draft until the English page is published. Vocabulary is the project's own glossary.
 
 **Tools and briefs** (this folder): `tools/style_lint.py` (the noise and the profile), `tools/docx_to_text.py` (Word to text, for studies like the Ring book's), `briefs/voice-reader.md` (how a chapter sounds, with evidence), `briefs/fresh-verifier.md` and `briefs/fixer.md` (claim by claim against the record, then the smallest fix), `briefs/answer-policy.md` (delegated answers that invent nothing), `briefs/translator.md`; `checklists/chapter.md`, `checklists/noise.md`, `checklists/release.md`; `templates/chapter.md`, `templates/memo.md`, `templates/decisions.md`.
 

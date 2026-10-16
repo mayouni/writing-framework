@@ -2,7 +2,7 @@
 id: <slug>
 number: <n>
 title: "<title>"
-status: draft          # draft | read | final — only the author sets read or final
+status: draft          # draft | review | published — only the author moves a page to review or published (AWF-13)
 stage:                 # the book's stage words, from the code
   built: ""
   designed: ""
