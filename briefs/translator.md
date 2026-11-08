@@ -10,7 +10,7 @@ The translation is of the English page, page for page, in the same voice (first 
 
 **Vocabulary:** the project's own glossary first (the site's words, the book's style sheet), then the plainest word, kept the same on every page. Terms with two senses in English (commit as the governed act and commit in git; plane and plan) get two words and the style sheet says which.
 
-**Voice:** plain, short sentences, no inflation, the loss printed beside the win; the warmth is in the stories, never in adjectives. Typography of the target language (French: « », the comma decimal in prose, spaced thousands).
+**Voice:** plain, short sentences, no inflation, each claim at its true size; the warmth is in the stories, never in adjectives. Typography of the target language (French: « », the comma decimal in prose, spaced thousands).
 
 **Checks:** the book's mechanical checker (`check_fr`-style: front matter, fences byte-identical, headings, counts) must pass; a word-to-look-at warning is read, not ignored.
 

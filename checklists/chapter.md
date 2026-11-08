@@ -6,7 +6,7 @@ Answer each with a line of the chapter as evidence, or "no". A chapter is not re
 |---|---|---|
 | C1 | Does every explanation follow a thing the reader can run, and is the machine's answer quoted exactly, with its verdict? Is there a paragraph of abstract nouns with no run, figure or example within reach? | |
 | C2 | What does the chapter leave in the reader's hands, named as unfinished? Is a wrong version shown before the right one where it teaches? Is correct code ever rejected for a stated reason of taste? | |
-| C3 | Is the limit stated in the book's stage words? Is a loss printed beside each win? Does any sentence say more than the page shows? | |
+| C3 | Is what the subject covers today stated in the book's stage words, each bound a claim at its true size? Does any sentence say more than the page shows? | |
 | C4 | Is every name, date, place, person and memory true and sourced (or `[AUTHOR]`-marked)? Is any particular composed? | |
 | C5 | Is each metaphor either spent in a sentence or load-bearing and mapped once where it starts, with stable names? Any decorative one? | |
 | C6 | Do I / we / you keep their jobs? Are questions beats answered on the page? Is every exclamation after a run or a reveal? | |

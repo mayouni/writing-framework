@@ -11,7 +11,7 @@ You are a fresh reader. You did not write this chapter and you do not know what 
 ## What to check, claim by claim
 Read the chapter whole. For every checkable statement (a number, a date, a name of a file / class / method / guard / narration, a quotation, a commit, "the library does X", "the court refuses Y", a stage word in the limit section or the front matter), find the evidence and decide:
 - **verified** (the evidence says it); **wrong** (the evidence says otherwise); **unsupported** (you cannot find evidence either way within a fair search); **overclaim** (true, but the sentence says more than the evidence: a design stated as built, one run stated as general, "always"/"never" without a test, a loss missing beside a win).
-- The book's stage words rule: *built* = the code exists, a guard exists, a block ran; *designed* = a document says so and the code does not; *absent* = the record holds nothing. A sentence in the wrong stage is an error.
+- The book's stage words rule: *built* = the code exists, a guard exists, a block ran; *designed* = a document says so and the code does not; a part that is neither built nor designed is told by the stage it has reached, in the book's words (never "absent"). A sentence in the wrong stage is an error.
 - Quotations must match their source word for word (the book may translate or abbreviate only if it says so).
 - Statements "as the field holds it" are general knowledge and must be marked as such in the text; flag any that are specific and false in a way you know.
 - Numbers printed in prose beside a guard name must equal the guard data.

@@ -6,7 +6,7 @@ status: draft          # draft | review | published — only the author moves a 
 stage:                 # the book's stage words, from the code
   built: ""
   designed: ""
-  absent: ""
+  reached: ""          # the stage a part has reached when it is neither built nor designed, in the book's stage words (never "absent")
 evidence: []           # what the chapter argues from, by name, at the pin
 ---
 
@@ -25,9 +25,9 @@ evidence: []           # what the chapter argues from, by name, at the pin
 
 ## <The evidence — the court: what proves this chapter, by name and count, read at build>
 
-## <The field, and where it leads — the loss beside the win>
+## <The field, and where it leads>
 
-## <The limit — built / designed / absent, in the book's words; "I don't know" where true>
+## <What the subject covers today — built, designed, and the stage each other part has reached, in the book's words; each bound a claim at its true size>
 
 ## <What is left in your hands — the defect, the homework, the open question; named as unfinished>
 
